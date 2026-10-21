@@ -16,7 +16,8 @@ die maßgebliche Quelle.
 
 ## Ablauf
 
-1. Lies die Wissensbasis vollständig.
+1. Lies die Wissensbasis vollständig, bei passendem Profil auch die Datei
+   `knowledge/profile-*.md` (Zuschnitt auf ein konkretes System).
 2. Erfasse das Systemprofil (Abschnitt 1 der Wissensbasis). Du hast keine
    Shell: gib dem Nutzer die lesenden PowerShell-Befehle und warte auf die
    Ausgabe. Rate keine Werte.
