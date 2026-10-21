@@ -17,8 +17,9 @@ damit nicht die Zielumgebung, sondern später die lokale Entwicklungsumgebung,
 die der VPS-Distribution gleicht ([[wsl-windows-best-practice]]).
 
 > [!warning] Quellenlage
-> Hostinger-Daten stammen aus Websuchergebnissen mit Hostinger-Seiten vom
-> 2026-10-21. Der direkte Abruf der Seiten war in der Sitzung nicht möglich.
+> Tarife, Preise, Rechenzentren und Vorlagen stammen aus der Hostinger-API
+> (Connector, nur lesend) vom 2026-10-21. Textpassagen zu Web/Cloud-Hosting
+> stammen aus Websuchergebnissen.
 > Preise und Specs vor dem Kauf auf der Live-Seite prüfen. Abschnitte mit
 > `[allgemein]` sind Linux-Standardpraxis und nicht aus Microsoft Learn oder
 > Hostinger belegt.
@@ -36,19 +37,29 @@ Die Anforderung „Linux-Server, Docker, eigene Kontrolle“ führt zum KVM-VPS.
 Preise und Konditionen schwanken je nach Seite, Währung und Laufzeit;
 Promopreise steigen bei Verlängerung.
 
-### KVM-Tarife (laut Hostinger-Parameterseite)
+### KVM-Tarife (Hostinger-API, Katalog `hostingerde`, Abruf 2026-10-21)
 
-| Tarif | vCPU | RAM | NVMe | Traffic | Richtpreis USD/Monat (Promo) |
-| --- | --- | --- | --- | --- | --- |
-| KVM 1 | 1 | 4 GB | 50 GB | 4 TB | 6,49 |
-| KVM 2 | 2 | 8 GB | 100 GB | 8 TB | 8,99 |
-| KVM 4 | 4 | 16 GB | 200 GB | 16 TB | 12,99 |
-| KVM 8 | 8 | 32 GB | 400 GB | 32 TB | 25,99 |
+Preise in EUR; links erste Laufzeit, rechts regulärer Preis (Verlängerung).
+Alle Tarife: 300 MB/s Netzwerk.
 
-Alle Tarife: 1 IPv4, 1 IPv6, Root-Zugriff, wöchentliche Backups, manuelle
-Snapshots, Firewall-Verwaltung, Vorlage „Ubuntu 24.04 mit Docker“ sowie ein
-Docker Manager mit Traefik-Vorlage (HTTPS-Routing).
-Verlängerungspreis KVM 1 laut Suchtreffer 11,99 USD, KVM 2 14,99 USD.
+| Tarif | vCPU | RAM | NVMe | Traffic | monatlich | 1 Jahr | 2 Jahre |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| KVM 1 | 1 | 4 GB | 50 GB | 4 TB | 7,99 → 17,49 | 71,88 → 155,88 | 131,76 → 287,76 |
+| KVM 2 | 2 | 8 GB | 100 GB | 8 TB | 9,99 → 21,49 | 101,88 → 203,88 | 186,96 → 359,76 |
+| KVM 4 | 4 | 16 GB | 200 GB | 16 TB | 19,99 → 35,99 | 155,88 → 359,88 | 263,76 → 671,76 |
+| KVM 8 | 8 | 32 GB | 400 GB | 32 TB | 38,99 → 64,99 | 299,88 → 647,88 | 527,76 → 1199,76 |
+
+Die Game-Panel-Tarife (Minecraft) sind für dein Vorhaben irrelevant.
+Der Verlängerungspreis liegt deutlich über dem Einstiegspreis; Laufzeit
+bewusst wählen.
+
+Rechenzentren: Vilnius, Paris (2), Manchester, Düsseldorf in Europa; weitere in
+Nordamerika, Asien, Südamerika. Für Nutzer in Deutschland liegt Düsseldorf nahe.
+
+Relevante OS-Vorlagen (IDs der API): Ubuntu 24.04 mit Docker (1121), mit
+Docker und Traefik (1210), Ubuntu 24.04 (1077), Debian 12/13, Dokploy (1092),
+Coolify (1087), Portainer (1143), Easypanel (1122), n8n (1153), Supabase (1199),
+MERN/MEAN/MEVN (1206/1205/1207), Ubuntu 24.04 mit Claude Code (1189).
 
 ### Empfehlung (Einschätzung, nicht Quellenaussage)
 
